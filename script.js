@@ -8,7 +8,7 @@ let m = now.getMonth() + 1;
 let d = now.getDate();
 let y = now.getFullYear();
 
-// make sure it's 2 digits
+// add leading zero
 if (m < 10) {
   m = "0" + m;
 }
@@ -25,19 +25,16 @@ document.getElementById("dateOutput").textContent = todayText;
 // Part 2: Number Conversion
 // ==========================
 
-// values
 let a = "42";
 let b = "19.75";
 let c = "hello";
 let d2 = "100";
 
-// convert
 let aNum = Number(a);
 let bNum = Number(b);
 let cNum = Number(c);
 let dNum = Number(d2);
 
-// build text (not super fancy, just simple)
 let text = "";
 
 text += "Original: '" + a + "' -> Converted: " + aNum +
@@ -76,7 +73,6 @@ document.getElementById("numberConversionOutput").innerHTML = text;
 // Part 3: Math & Formatting
 // ==========================
 
-// simple price example
 let item = 25.5;
 let taxRate = 0.08;
 let ship = 5;
@@ -85,7 +81,6 @@ let sub = item + ship;
 let tax = sub * taxRate;
 let total = sub + tax;
 
-// format
 let totalNice = total.toFixed(2);
 
 let mathText = "";
@@ -96,7 +91,6 @@ mathText += "Subtotal: $" + sub + "<br>";
 mathText += "Tax: $" + tax.toFixed(2) + "<br>";
 mathText += "Total: $" + totalNice;
 
-// another if/else
 if (total > 30) {
   mathText += "<br>Total is pretty high.";
 } else {
